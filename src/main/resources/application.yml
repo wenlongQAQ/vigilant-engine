@@ -1,0 +1,12 @@
+server:
+  port: 8111
+#spring:
+#  security:
+#    user:
+#      name: lwl
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: gx!uF5cXK
+#      password: 773923
