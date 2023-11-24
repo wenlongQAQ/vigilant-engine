@@ -21,7 +21,7 @@ public class MyUserServiceDetail implements UserDetailsService {
     private UserMapper userMapper;
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        List<GrantedAuthority> role = AuthorityUtils.commaSeparatedStringToAuthorityList("role");
+        List<GrantedAuthority> role = AuthorityUtils.commaSeparatedStringToAuthorityList("admins,ROLE_sal");
         // 根据用户名查询数据库
         TUser tUser = userMapper.selectOne(new LambdaQueryWrapper<TUser>().eq(TUser::getUsername, s));
         if (tUser == null)
